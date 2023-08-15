@@ -1,0 +1,129 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+#navbarNavDropdown {
+  display: flex;
+  justify-content: space-around;
+}
+.inicio {
+  height: 80vh;
+  background-image: url("../imagenes_tenis/pelota_tenis.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.inicio-texto {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.inicio-texto h1 {
+  margin: 30px;
+  color: #faa72a;
+}
+.inicio-texto h2 {
+  margin-left: 180px;
+  color: #98560a;
+}
+.section2 {
+  height: 50vh;
+}
+.section2 h2 {
+  text-align: center;
+  margin: 50px;
+}
+.marcas {
+  margin: 0 auto;
+  width: 90%;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.marca {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 1px solid black;
+}
+.marca img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.contenedormarca {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section3 {
+  background-color:#cb9c54;
+  margin: 12vh 0 0 0;
+  height: 120vh;
+display:flex;
+flex-direction:column;
+}
+.contenedor-section3 {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  
+}
+.section3-contenedor-img {
+  height: 100%;
+  width: 50%;
+}
+.section3-img {
+  width: 100%;
+  height: 100%;
+}
+
+.section3-contenido {
+  height: 100%;
+  width: 50%;
+}
+.section4{
+    height: 50vh;
+    display:flex;
+    justify-content:center;
+}
+.publicidad {
+    margin: auto;
+  width: 70%;
+  height: 30vh;
+  background: radial-gradient(circle, #faa72a, #d98c1f, #b97115);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.publicidad h2 {
+  color: black;
+}
+.publicidad button {
+  background-color: #98560a;
+  height: 50px;
+  width: 200px;
+  margin-top:30px;
+  border: 2px solid black;
+  border-radius: 10%;
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  -ms-border-radius: 10%;
+  -o-border-radius: 10%;
+}
+.publicidad button a {
+  text-decoration: none;
+  color: black;
+}
