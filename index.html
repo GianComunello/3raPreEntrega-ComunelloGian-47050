@@ -4,52 +4,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>TiendaTenis</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">LOGO</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Zapatillas
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Hombre</a></li>
-                <li><a class="dropdown-item" href="#">Mujer</a></li>
-                <li><a class="dropdown-item" href="#">Niños</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Raquetas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Accesorios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contacto</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <nav>
+      <div class="logoNav">
+      <a href="#inicio">TiendaTenis</a>
+    </div>
+    <ul class="ulNav">
+      <li> <a href="index.html">Inicio</a></li>
+      <li> <a href="">Tienda</a></li>
+    </ul>
+    <div class="imgCarrito">
+    <img src="/imagenes_tenis/carrito.png" alt="carrito">
+  </div>
     </nav>
   </header>
-  <section class="inicio">
+  <section id="inicio">
     <div class="inicio-texto">
       <h1>Tienda de zapatillas de tenis</h1>
       <h2>Raquetas y accesorios</h2>
@@ -98,7 +78,37 @@
   </section>
   <section class="section4">
   <div class="publicidad"> <h2> Hace tu pedido online y te llega a la puerta de tu casa!</h2>
- <button> <a href="#inicio">Contacto</a></button></div>
+    <a href="#inicio"><button>Tienda</button></a></div>
+</section>
+<section class="section5">
+  <h2> Opiniones de nuestros clientes:</h2>
+  <div class="contenedorComentarios">
+  <div class="fotoAutor"> <img src="" alt=""> </div>
+  <div class="comentarios"> <h3> "Las zapatillas de tenis son alucinantes y super comodas, me hicieron amar este deporte ademas de hacerme sentir que juego como federer, sinceramente se lleva mis dieces.</h3> </div></div>
+  <div class="autores"> 
+    <ul class="autoresLista"> 
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+</section>
+<section class="section6">
+  <h2> Lo mas vendido:</h2>
+  <div class="productos-populares">
+   <div class="producto"> <img class="img-producto" src="./imagenes_tenis/nikecourtvapor.jpg" alt="nike">
+  <h2>Nike Vapor Lite Cly </h2>
+<button>Comprar aqui</button></div>
+   <div class="producto"> <img class="img-producto" src="./imagenes_tenis/adidasgamecourt.jpg" alt="adidas">
+  <h2>Adidas Game Court 2</h2>
+  <button>Comprar aqui</button></div>
+   <div class="producto"> <img class="img-producto" src="./imagenes_tenis/asicsgeldedicate.jpg" alt="asics">
+  <h2>Asics Gel Dedicate 7 Clay</h2><button>Comprar aqui</button></div>
+   <div class="producto"> <img class="img-producto" src="./imagenes_tenis/raquetawilsonblade.jpeg" alt="wilson">
+  <h2>Raqueta Tenis Wilson Pro Open Aro</h2>
+  <button>Comprar aqui</button>
+</div>
+  </div>
 </section>
   <footer>
     <p>todos los derechos reservados</p>

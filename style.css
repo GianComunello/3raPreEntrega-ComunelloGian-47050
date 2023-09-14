@@ -2,12 +2,57 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
-#navbarNavDropdown {
-  display: flex;
-  justify-content: space-around;
+nav{
+  background-color:grey;
+  padding:20px;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  font-size:20px;
 }
-.inicio {
+.logoNav{
+  position:absolute;
+  left: 15px;
+}
+.logoNav a{
+text-decoration:none;
+color:black;
+}
+
+.ulNav{
+list-style-type: none;
+display:flex;
+align-items:center;
+margin:0;
+}
+.ulNav li{
+  margin: 0 20px;
+}
+.ulNav li a{
+  text-decoration:none;
+color:black;
+}
+.imgCarrito{
+  position:absolute;
+  top:5px;
+  right:15px;
+  border-radius:50px;
+  -webkit-border-radius:50px;
+  -moz-border-radius:50px;
+  -ms-border-radius:50px;
+  -o-border-radius:50px;
+  border: 2px solid black;
+  width: 3em;
+  height: 3em;
+}
+.imgCarrito img{
+  padding:5px;
+  width: 100%;
+  height: 100%;
+}
+#inicio {
   height: 80vh;
   background-image: url("../imagenes_tenis/pelota_tenis.jpg");
   background-size: cover;
@@ -21,7 +66,7 @@
 }
 .inicio-texto h1 {
   margin: 30px;
-  color: #faa72a;
+  color: #98560a;
 }
 .inicio-texto h2 {
   margin-left: 180px;
@@ -44,8 +89,8 @@
   align-items: center;
 }
 .marca {
-  height: 120px;
-  width: 120px;
+  height: 130px;
+  width: 130px;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -126,4 +171,104 @@ flex-direction:column;
 .publicidad button a {
   text-decoration: none;
   color: black;
+}
+.section5{
+  background-color:#ffeda6;
+  height: 80vh;
+}
+.section5 h2{
+  text-align:center;
+  padding:20px;
+}
+.contenedorComentarios{
+  display:flex;
+  height: 50%;
+  width: 100%;
+  margin: 20px auto;
+}
+.fotoAutor{
+  margin:10px;
+  width: 50%;
+  border: 1px solid black;
+  border-radius:50%;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  -ms-border-radius:50%;
+  -o-border-radius:50%;
+}
+.comentarios{
+  width: auto;
+  display:flex;
+  align-items:center;
+}
+.comentarios h3{
+  margin:20px;
+  letter-spacing: 3px;
+}
+.autores{
+  width: 22%;
+  height: 20%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.autoresLista{
+  display:flex;
+  justify-content:center;
+}
+.autoresLista li{
+  margin:10px;
+  border: 1px solid black;
+  height: 50px;
+  width: 50px;
+  border-radius:50%;
+  list-style-type: none;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  -ms-border-radius:50%;
+  -o-border-radius:50%;
+}
+
+.section6{
+  margin-top:30px;
+    height: 70vh;
+}
+.productos-populares{
+    width: 90%;
+    height: 50vh;
+    background-color:#ffe197;
+    margin:30px auto;
+    display:flex;
+    justify-content:space-evenly;
+    
+}
+.producto{
+    height: 100%;
+    width: 20%;
+    background-color:#faa72a;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.producto h2{
+ font-size:20px;
+ margin-top:20px;
+}
+.img-producto{
+    margin:5px;
+    height: 50%;
+    width: 50%;
+}
+.producto button{
+background-color: #98560a;
+height: 50px;
+width: 100px;
+margin:10px;
+}
+footer{
+    background-color:#ffeda6;
+    padding:50px;
+}
+footer p{
+    text-align:center;
 }
