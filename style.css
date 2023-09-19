@@ -188,7 +188,7 @@ flex-direction:column;
 }
 .fotoAutor{
   margin:10px;
-  width: 50%;
+  width: 40em;
   border: 1px solid black;
   border-radius:50%;
   -webkit-border-radius:50%;
@@ -196,12 +196,12 @@ flex-direction:column;
   -ms-border-radius:50%;
   -o-border-radius:50%;
 }
-.comentarios{
-  width: auto;
+#comentarios{
+  width: 130em;
   display:flex;
   align-items:center;
 }
-.comentarios h3{
+#comentarios h3{
   margin:20px;
   letter-spacing: 3px;
 }
@@ -217,7 +217,7 @@ flex-direction:column;
   justify-content:center;
 }
 .autoresLista li{
-  margin:10px;
+  margin:5px;
   border: 1px solid black;
   height: 50px;
   width: 50px;
@@ -227,6 +227,7 @@ flex-direction:column;
   -moz-border-radius:50%;
   -ms-border-radius:50%;
   -o-border-radius:50%;
+  cursor: pointer;
 }
 
 .section6{
