@@ -115,7 +115,7 @@ color:black;
 .section3 {
   background-color:#cb9c54;
   margin: 12vh 0 0 0;
-  height: 120vh;
+  height: 130vh;
 display:flex;
 flex-direction:column;
 }
@@ -137,6 +137,15 @@ flex-direction:column;
 .section3-contenido {
   height: 100%;
   width: 50%;
+}
+.section3-ul li{
+  list-style: none;
+  margin:20px;
+  font-size:18px;
+}
+.section3-contenido h2 {
+  text-align:center;
+  margin:20px;
 }
 .section4{
     height: 50vh;
@@ -187,8 +196,12 @@ flex-direction:column;
   margin: 20px auto;
 }
 .fotoAutor{
+  background-image: url("./imagenes_tenis/autor1messi.webp");
+  background-size: cover;
+  background-position: center;
   margin:10px;
-  width: 40em;
+  width: 550px;
+  height: 270px;
   border: 1px solid black;
   border-radius:50%;
   -webkit-border-radius:50%;
@@ -196,6 +209,7 @@ flex-direction:column;
   -ms-border-radius:50%;
   -o-border-radius:50%;
 }
+
 #comentarios{
   width: 130em;
   display:flex;
@@ -204,6 +218,7 @@ flex-direction:column;
 #comentarios h3{
   margin:20px;
   letter-spacing: 3px;
+  font-family: Georgia, serif;
 }
 .autores{
   width: 22%;
@@ -215,6 +230,8 @@ flex-direction:column;
 .autoresLista{
   display:flex;
   justify-content:center;
+  padding:0;
+  margin:0;
 }
 .autoresLista li{
   margin:5px;
@@ -229,7 +246,30 @@ flex-direction:column;
   -o-border-radius:50%;
   cursor: pointer;
 }
-
+#primerLi{
+  background-image: url("./imagenes_tenis/autor1messi.webp");
+  background-size: cover;
+  background-position: center;
+}
+#segundoLi{
+  background-image: url("./imagenes_tenis/autor2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#tercerLi{
+  background-image: url("./imagenes_tenis/autor3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#autorNombre{
+  position:absolute;
+  right:30px;
+  width: 30%;
+  height: 40px;
+}
+#autorNombre h4{
+  font-family: Georgia, serif;
+}
 .section6{
   margin-top:30px;
     height: 70vh;
