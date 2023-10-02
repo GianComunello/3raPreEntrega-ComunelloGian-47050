@@ -2,53 +2,54 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
-nav{
-  background-color:grey;
-  padding:20px;
-  display:flex;
-  justify-content:center;
+nav {
+  background-color: grey;
+  padding: 23px;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  font-size:20px;
+  font-size: 20px;
 }
-.logoNav{
-  position:absolute;
+.logoNav {
+  position: absolute;
   left: 15px;
 }
-.logoNav a{
-text-decoration:none;
-color:black;
+.logoNav a {
+  text-decoration: none;
+  color: black;
 }
 
-.ulNav{
-list-style-type: none;
-display:flex;
-align-items:center;
-margin:0;
+.ulNav {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
 }
-.ulNav li{
+.ulNav li {
   margin: 0 20px;
 }
-.ulNav li a{
-  text-decoration:none;
-color:black;
+.ulNav li a {
+  text-decoration: none;
+  color: black;
 }
-.imgCarrito{
-  position:absolute;
-  top:5px;
-  right:15px;
-  border-radius:50px;
-  -webkit-border-radius:50px;
-  -moz-border-radius:50px;
-  -ms-border-radius:50px;
-  -o-border-radius:50px;
-  border: 2px solid black;
+.imgCarrito {
+  position: absolute;
+  top: 5px;
+  right: 25px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border: 1px solid black;
   width: 3em;
   height: 3em;
+  cursor: pointer;
 }
-.imgCarrito img{
-  padding:5px;
+.imgCarrito img {
+  padding: 8px;
   width: 100%;
   height: 100%;
 }
@@ -67,10 +68,12 @@ color:black;
 .inicio-texto h1 {
   margin: 30px;
   color: #98560a;
+  font-size: 2.5rem;
 }
 .inicio-texto h2 {
   margin-left: 180px;
   color: #98560a;
+  font-size: 2rem;
 }
 .section2 {
   height: 50vh;
@@ -89,6 +92,7 @@ color:black;
   align-items: center;
 }
 .marca {
+  margin: 10px;
   height: 130px;
   width: 130px;
   border-radius: 50%;
@@ -99,6 +103,7 @@ color:black;
   border: 1px solid black;
 }
 .marca img {
+  padding: 5px;
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -113,17 +118,16 @@ color:black;
   align-items: center;
 }
 .section3 {
-  background-color:#cb9c54;
+  background-color: #cb9c54;
   margin: 12vh 0 0 0;
   height: 130vh;
-display:flex;
-flex-direction:column;
+  display: flex;
+  flex-direction: column;
 }
 .contenedor-section3 {
   width: 100%;
   height: 50%;
   display: flex;
-  
 }
 .section3-contenedor-img {
   height: 100%;
@@ -138,22 +142,22 @@ flex-direction:column;
   height: 100%;
   width: 50%;
 }
-.section3-ul li{
+.section3-ul li {
   list-style: none;
-  margin:20px;
-  font-size:18px;
+  margin: 20px;
+  font-size: 18px;
 }
 .section3-contenido h2 {
-  text-align:center;
-  margin:20px;
+  text-align: center;
+  margin: 20px;
 }
-.section4{
-    height: 50vh;
-    display:flex;
-    justify-content:center;
+.section4 {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
 }
 .publicidad {
-    margin: auto;
+  margin: auto;
   width: 70%;
   height: 30vh;
   background: radial-gradient(circle, #faa72a, #d98c1f, #b97115);
@@ -164,12 +168,13 @@ flex-direction:column;
 }
 .publicidad h2 {
   color: black;
+  margin: 10px;
 }
 .publicidad button {
   background-color: #98560a;
   height: 50px;
   width: 200px;
-  margin-top:30px;
+  margin-top: 30px;
   border: 2px solid black;
   border-radius: 10%;
   -webkit-border-radius: 10%;
@@ -180,136 +185,284 @@ flex-direction:column;
 .publicidad button a {
   text-decoration: none;
   color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
-.section5{
-  background-color:#ffeda6;
+.section5 {
+  background-color: #ffeda6;
   height: 80vh;
+  font-size: 20px;
 }
-.section5 h2{
-  text-align:center;
-  padding:20px;
+.section5 h2 {
+  text-align: center;
+  padding: 20px;
 }
-.contenedorComentarios{
-  display:flex;
+.contenedorComentarios {
+  display: flex;
   height: 50%;
   width: 100%;
   margin: 20px auto;
 }
-.fotoAutor{
+.fotoAutor {
   background-image: url("./imagenes_tenis/autor1messi.webp");
   background-size: cover;
   background-position: center;
-  margin:10px;
+  margin: 10px;
   width: 550px;
   height: 270px;
   border: 1px solid black;
-  border-radius:50%;
-  -webkit-border-radius:50%;
-  -moz-border-radius:50%;
-  -ms-border-radius:50%;
-  -o-border-radius:50%;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
-#comentarios{
+#comentarios {
   width: 130em;
-  display:flex;
-  align-items:center;
+  display: flex;
+  align-items: center;
 }
-#comentarios h3{
-  margin:20px;
+#comentarios h3 {
+  margin: 20px;
   letter-spacing: 3px;
   font-family: Georgia, serif;
 }
-.autores{
+.autores {
   width: 22%;
   height: 20%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.autoresLista{
-  display:flex;
-  justify-content:center;
-  padding:0;
-  margin:0;
+.autoresLista {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
 }
-.autoresLista li{
-  margin:5px;
+.autoresLista li {
+  margin: 5px;
   border: 1px solid black;
   height: 50px;
   width: 50px;
-  border-radius:50%;
+  border-radius: 50%;
   list-style-type: none;
-  -webkit-border-radius:50%;
-  -moz-border-radius:50%;
-  -ms-border-radius:50%;
-  -o-border-radius:50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
   cursor: pointer;
 }
-#primerLi{
+.autoresLista li:hover{
+  transition:0.5s;
+  height: 60px;
+  box-shadow: 0 0 10px black;
+}
+#primerLi {
   background-image: url("./imagenes_tenis/autor1messi.webp");
   background-size: cover;
   background-position: center;
 }
-#segundoLi{
+#segundoLi {
   background-image: url("./imagenes_tenis/autor2.jpg");
   background-size: cover;
   background-position: center;
 }
-#tercerLi{
+#tercerLi {
   background-image: url("./imagenes_tenis/autor3.jpg");
   background-size: cover;
   background-position: center;
 }
-#autorNombre{
-  position:absolute;
-  right:30px;
+#autorNombre {
+  position: absolute;
+  right: 30px;
   width: 30%;
   height: 40px;
 }
-#autorNombre h4{
+#autorNombre h4 {
   font-family: Georgia, serif;
 }
-.section6{
-  margin-top:30px;
-    height: 70vh;
+.section6 {
+  margin-top: 30px;
+  height: 70vh;
 }
-.productos-populares{
-    width: 90%;
-    height: 50vh;
-    background-color:#ffe197;
-    margin:30px auto;
-    display:flex;
-    justify-content:space-evenly;
-    
+.section6 h2 {
+  margin-left: 20px;
 }
-.producto{
-    height: 100%;
-    width: 20%;
-    background-color:#faa72a;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+.productos-populares {
+  width: 90%;
+  height: 50vh;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-around;
 }
-.producto h2{
- font-size:20px;
- margin-top:20px;
+.producto {
+  height: 100%;
+  width: 20%;
+  background-color: #faa72a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
-.img-producto{
-    margin:5px;
-    height: 50%;
-    width: 50%;
+.producto h2 {
+  font-size: 20px;
+  margin-top: 20px;
 }
-.producto button{
-background-color: #98560a;
-height: 50px;
-width: 100px;
-margin:10px;
+.img-producto {
+  margin: 5px;
+  height: 50%;
+  width: 50%;
 }
-footer{
-    background-color:#ffeda6;
-    padding:50px;
+.producto button {
+  background-color: #98560a;
+  height: 50px;
+  width: 150px;
+  margin: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 15px ;
+  -webkit-border-radius: 15px ;
+  -moz-border-radius: 15px ;
+  -ms-border-radius: 15px ;
+  -o-border-radius: 15px ;
 }
-footer p{
-    text-align:center;
+.producto button a{
+  text-decoration:none;
+  color:black;
+}
+footer {
+  background-color: #ffeda6;
+  padding: 50px;
+}
+footer p {
+  text-align: center;
+}
+@media (max-width: 830px) {
+  .section2 {
+    height: 120vh;
+  }
+  .marcas {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .contenedor-section3 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .section3 {
+    height: auto;
+  }
+  .section3-contenedor-img {
+    margin: 20px;
+  }
+  .contenedorComentarios {
+    flex-direction: column;
+    align-items: center;
+  }
+  .section5 {
+    height: auto;
+  }
+  #comentarios {
+    width: auto;
+  }
+  .fotoAutor {
+    width: 20em;
+    height: 20em;
+  }
+  .autoresLista {
+    margin: 10px;
+  }
+  .productos-populares {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+  .producto {
+    margin: 20px;
+    height: auto;
+    width: 70%;
+  }
+  .section6 {
+    height: auto;
+  }
+}
+#main {
+  background-color: #faa72a;
+}
+.tituloTienda {
+  text-align: center;
+  padding: 20px;
+  font-size: 4em;
+}
+.tiendaBuscador {
+  display: flex;
+  justify-content: center;
+  width: 95%;
+  height: 5vh;
+  margin: 40px;
+}
+.tiendaBuscador input {
+  width: 50%;
+}
+.tienda {
+  width: 100%;
+  height: 400vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.tiendaFiltros {
+  width: 25%;
+  height: 100vh;
+  display: flex;
+}
+
+.filtros {
+  border: 1px solid black;
+  height: 100%;
+  width: 70%;
+}
+.tiendaTiendaContenedor {
+  margin-top: 40px;
+  width: 70%;
+  height: 350vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+.tiendaTienda {
+  background-color: blue;
+  height: auto;
+  width: 80%;
+}
+.productoTienda {
+  height: 23rem;
+  width: calc(33.33% - 10px);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.productoTienda h2 {
+  margin: 10px;
+}
+.img-productoTienda {
+  margin-buttom: 10px;
+  height: 50%;
+  width: 90%;
+  object-fit: contain;
+}
+.botonAgregarCarrito {
+  background-color: #98560a;
+  height: 3em;
+  width: 70%;
+  margin: 5px;
 }
