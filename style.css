@@ -55,7 +55,7 @@ nav {
 }
 #inicio {
   height: 80vh;
-  background-image: url("../imagenes_tenis/pelota_tenis.jpg");
+  background-image: url("./imagenes_tenis/pelota_tenis.jpg");
   background-size: cover;
   background-position: center;
 }
