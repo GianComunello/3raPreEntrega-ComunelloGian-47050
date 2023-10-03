@@ -426,22 +426,18 @@ footer p {
   height: 100%;
   width: 70%;
 }
-.tiendaTiendaContenedor {
+.tiendaContenedor {
   margin-top: 40px;
   width: 70%;
-  height: 350vh;
+  height: 370vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   border: 1px solid black;
 }
-.tiendaTienda {
-  background-color: blue;
-  height: auto;
-  width: 80%;
-}
+
 .productoTienda {
-  height: 23rem;
+  height: 24rem;
   width: calc(33.33% - 10px);
   background-color: white;
   display: flex;
@@ -465,4 +461,44 @@ footer p {
   height: 3em;
   width: 70%;
   margin: 5px;
+  cursor:pointer;
+  position:relative;
+  bottom:5px;
 }
+
+#toggleCarrito {
+  width: 20%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: -300px; 
+  background-color: #f0f0f0;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease-in-out;
+  z-index: 2;
+}
+
+#cerrarCarrito {
+  cursor: pointer;
+  background-color: #dc3545;
+  color: #fff;
+  padding: 8px 10px;
+  position:absolute;
+  top:0px;
+  left:0;
+}
+.tituloCarrito{
+  text-align:center;
+  margin:20px;
+  font-size:2.5em;
+}
+.cantidadProductosTexto{
+text-align:center;
+margin:5px;
+}
+.totalProductosTexto{
+margin:10px;
+font-size:1.6em;
+}
+

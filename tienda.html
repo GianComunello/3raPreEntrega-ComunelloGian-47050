@@ -8,10 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
   <header>
     <nav>
@@ -24,20 +22,30 @@
       </ul>
       <div class="imgCarrito">
         <img src="/imagenes_tenis/carrito.png" alt="carrito">
-      </div>
+       </div>
     </nav>
   </header>
   <main id="main">
+    <div id="toggleCarrito" class="carrito-cerrado">
+      <div class="contenido-carrito">
+        <button id="cerrarCarrito">Cerrar Carrito</button>
+         <h2 class="tituloCarrito">Carrito</h2>
+         <h3 class="cantidadProductosTexto">Cantidad de productos: <span id="cantidadProductos">0</span></h3>
+          <h3 class="totalProductosTexto">Total: $ <span id="totalCarrito">0</span></h3>
+         
+      </div>
+  </div>
+  </div>
     <h1 class="tituloTienda">Tienda</h1>
     <section class="tiendaBuscador">
-      <input type="text">
+      <input class="Buscador" type="text" placeholder="Buscar un producto...">
     </section>
     <section class="tienda">
       <section class="tiendaFiltros">
         <div class="filtros"></div>
       </section>
-      <section class="tiendaTiendaContenedor">
-        <div class="productoTienda"> <img class="img-productoTienda" src="./imagenes_tenis/nikecourtvapor.jpg"
+      <section class="tiendaContenedor">
+        <!-- <div class="productoTienda"> <img class="img-productoTienda" src="./imagenes_tenis/nikecourtvapor.jpg"
             alt="nike">
           <h2>Nike Vapor Lite Clay </h2>
           <h2>$99000</h2>
@@ -80,12 +88,11 @@
           <h2>$40000</h2>
           <button class="botonAgregarCarrito">Agregar al carrito</button>
         </div>
-        <div class="productoTienda"> <img class="img-productoTienda" src="./imagenes_tenis/VinchaNike.jpg"
-          alt="nike">
-        <h2>Vincha Nike</h2>
-        <h2>$7000</h2>
-        <button class="botonAgregarCarrito">Agregar al carrito</button>
-      </div>
+        <div class="productoTienda"> <img class="img-productoTienda" src="./imagenes_tenis/VinchaNike.jpg" alt="nike">
+          <h2>Vincha Nike</h2>
+          <h2>$7000</h2>
+          <button class="botonAgregarCarrito">Agregar al carrito</button>
+        </div>
         <div class="productoTienda"> <img class="img-productoTienda" src="./imagenes_tenis/AdidasGameCourtMujerjpg.jpg"
             alt="adidas">
           <h2>Adidas Game Court Mujer</h2>
@@ -93,66 +100,65 @@
           <button class="botonAgregarCarrito">Agregar al carrito</button>
         </div>
         <div class="productoTienda"> <img class="img-productoTienda" src="./imagenes_tenis/NikeCourtAirZoomVapor.jpg"
-          alt="nike">
-        <h2>Nike Court Zoom Vapor</h2>
-        <h2>$104000</h2>
-        <button class="botonAgregarCarrito">Agregar al carrito</button>
-      </div>
-      <div class="productoTienda"> <img class="img-productoTienda" src="./imagenes_tenis/AdidasBarricade12.jpg"
-        alt="adidas">
-      <h2>Adidas Barricade</h2>
-      <h2>$80000</h2>
-      <button class="botonAgregarCarrito">Agregar al carrito</button>
-    </div>
-    <div class="productoTienda"> <img class="img-productoTienda" src="./imagenes_tenis/NewBalanceFrehFoam1080.jpg"
-      alt="newbalance">
-    <h2>New Balance Fresh Foam</h2>
-    <h2>$95000</h2>
-    <button class="botonAgregarCarrito">Agregar al carrito</button>
-  </div>
-  <div class="productoTienda"> <img class="img-productoTienda" src="./imagenes_tenis/muñequeraNike.jpg"
-    alt="nike">
-  <h2>Muñequera Nike</h2>
-  <h2>$6000</h2>
-  <button class="botonAgregarCarrito">Agregar al carrito</button>
-</div>
-<div class="productoTienda"> <img class="img-productoTienda" src="./imagenes_tenis/NewBalanceFuelCellRebelMujer.jpg"
-  alt="newbalance">
-<h2>New Balance FuelCell Rebel</h2>
-<h2>$90000</h2>
-<button class="botonAgregarCarrito">Agregar al carrito</button>
-</div>
-<div class="productoTienda"> <img class="img-productoTienda" src="./imagenes_tenis/nikesbdunk.png"
-  alt="newbalance">
-<h2>Nike Dunk Low</h2>
-<h2>$130000</h2>
-<button class="botonAgregarCarrito">Agregar al carrito</button>
-</div>
-<div class="productoTienda"> <img class="img-productoTienda" src="./imagenes_tenis/NewBalance990v4Jupiter.jpg"
-  alt="newbalance">
-<h2>New Balance 990 v4 Jupiter</h2>
-<h2>$150000</h2>
-<button class="botonAgregarCarrito">Agregar al carrito</button>
-</div>
-<div class="productoTienda"> <img class="img-productoTienda" src="./imagenes_tenis/WilsonRushPro.jpg"
-  alt="newbalance">
-<h2>Nike Dunk Low</h2>
-<h2>$40000</h2>
-<button class="botonAgregarCarrito">Agregar al carrito</button>
-</div>
-<div class="productoTienda"> <img class="img-productoTienda" src="./imagenes_tenis/PelotaWilson.jpg"
-  alt="newbalance">
-<h2>Pelota Wilson x3</h2>
-<h2>$9000</h2>
-<button class="botonAgregarCarrito">Agregar al carrito</button>
-</div>
-        
+            alt="nike">
+          <h2>Nike Court Zoom Vapor</h2>
+          <h2>$104000</h2>
+          <button class="botonAgregarCarrito">Agregar al carrito</button>
+        </div>
+        <div class="productoTienda"> <img class="img-productoTienda" src="./imagenes_tenis/AdidasBarricade12.jpg"
+            alt="adidas">
+          <h2>Adidas Barricade</h2>
+          <h2>$80000</h2>
+          <button class="botonAgregarCarrito">Agregar al carrito</button>
+        </div>
+        <div class="productoTienda"> <img class="img-productoTienda" src="./imagenes_tenis/NewBalanceFrehFoam1080.jpg"
+            alt="newbalance">
+          <h2>New Balance Fresh Foam</h2>
+          <h2>$95000</h2>
+          <button class="botonAgregarCarrito">Agregar al carrito</button>
+        </div>
+        <div class="productoTienda"> <img class="img-productoTienda" src="./imagenes_tenis/muñequeraNike.jpg"
+            alt="nike">
+          <h2>Muñequera Nike</h2>
+          <h2>$6000</h2>
+          <button class="botonAgregarCarrito">Agregar al carrito</button>
+        </div>
+        <div class="productoTienda"> <img class="img-productoTienda"
+            src="./imagenes_tenis/NewBalanceFuelCellRebelMujer.jpg" alt="newbalance">
+          <h2>New Balance FuelCell Rebel</h2>
+          <h2>$90000</h2>
+          <button class="botonAgregarCarrito">Agregar al carrito</button>
+        </div>
+        <div class="productoTienda"> <img class="img-productoTienda" src="./imagenes_tenis/nikesbdunk.png"
+            alt="newbalance">
+          <h2>Nike Dunk Low</h2>
+          <h2>$130000</h2>
+          <button class="botonAgregarCarrito">Agregar al carrito</button>
+        </div>
+        <div class="productoTienda"> <img class="img-productoTienda" src="./imagenes_tenis/NewBalance990v4Jupiter.jpg"
+            alt="newbalance">
+          <h2>New Balance 990 v4 Jupiter</h2>
+          <h2>$150000</h2>
+          <button class="botonAgregarCarrito">Agregar al carrito</button>
+        </div>
+        <div class="productoTienda"> <img class="img-productoTienda" src="./imagenes_tenis/WilsonRushPro.jpg"
+            alt="newbalance">
+          <h2>Nike Dunk Low</h2>
+          <h2>$40000</h2>
+          <button class="botonAgregarCarrito">Agregar al carrito</button>
+        </div>
+        <div class="productoTienda"> <img class="img-productoTienda" src="./imagenes_tenis/PelotaWilson.jpg"
+            alt="newbalance">
+          <h2>Pelota Wilson x3</h2>
+          <h2>$9000</h2>
+          <button class="botonAgregarCarrito">Agregar al carrito</button> 
+        </div>-->
       </section>
   </main>
   <footer>
     <p>todos los derechos reservados</p>
   </footer>
-  <script src="app.js"></script>
+  <script src="tienda.js"></script>
 </body>
 
 </html>

@@ -4,16 +4,12 @@ const segundoLi = document.getElementById("segundoLi");
 const tercerLi = document.getElementById("tercerLi");
 const fotoAutor = document.getElementsByClassName("fotoAutor")[0];
 const autorNombre = document.querySelector("#autorNombre h4");
-const carrito = document.querySelector("imgCarrito");
 
 primerLi.addEventListener("click", cambiarPrimerLi);
 segundoLi.addEventListener("click", cambiarSegundoLi);
 tercerLi.addEventListener("click", cambiarTercerLi);
-carrito.addEventListener("click", abrirCarrito);
 
-function abrirCarrito(){
 
-}
 function cambiarPrimerLi() {
   cambiarComentarios.innerHTML =
     "<h3>Las zapatillas de tenis son alucinantes y super comodas, me hicieron amar este deporte ademas de hacerme sentir que juego como federer, sinceramente se lleva mis dieces.</h3>";
