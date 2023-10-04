@@ -29,12 +29,14 @@
   </header>
   <section id="inicio">
     <div id="toggleCarrito" class="carrito-cerrado">
-      <div class="contenido-carrito">
-         <h2 class="tituloCarrito">Carrito</h2>
-          <button id="cerrarCarrito">Cerrar Carrito</button>
-      </div>
-  </div>
-  </div>
+      <button id="cerrarCarrito">Cerrar Carrito</button>
+       <h2 class="tituloCarrito">Carrito</h2>
+       <h3 class="cantidadProductosTexto">Cantidad de productos: <span id="cantidadProductos">0</span></h3>
+        <h3 class="totalProductosTexto">Total: $ <span id="totalCarrito">0</span></h3>
+        <div class="contenido-carrito">
+          <!-- Productos del carrito-->
+    </div>
+</div>
     <div class="inicio-texto">
       <h1>Tienda de zapatillas de tenis</h1>
       <h2>Raquetas y accesorios</h2>
@@ -136,7 +138,8 @@
       <div class="producto"> <img class="img-producto" src="./imagenes_tenis/raquetawilsonblade.jpeg" alt="wilson">
         <h2>Raqueta Tenis Wilson Pro Open Aro</h2>
         <button><a href="tienda.html"> Comprar aqui!</a></button>
-
+        <section class="tiendaContenedor" style="display:none;"></section>
+        <input class="buscador" type="text" placeholder="Buscar un producto..." style="display:none;">
       </div>
     </div>
   </section>

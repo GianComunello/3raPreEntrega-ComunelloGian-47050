@@ -34,6 +34,10 @@ nav {
   text-decoration: none;
   color: black;
 }
+.ulNav li a:hover{
+  font-size:1.1em;
+  font-weight:bold;
+}
 .imgCarrito {
   position: absolute;
   top: 5px;
@@ -400,13 +404,24 @@ footer p {
 }
 .tiendaBuscador {
   display: flex;
-  justify-content: center;
-  width: 95%;
+ justify-content:flex-end;
+ align-items:center;
+  width: 80%;
   height: 5vh;
   margin: 40px;
 }
+.tiendaBuscador img{
+width: 40px;
+}
 .tiendaBuscador input {
   width: 50%;
+  border-radius:20px;
+  -webkit-border-radius:20px;
+  -moz-border-radius:20px;
+  -ms-border-radius:20px;
+  -o-border-radius:20px;
+  border:2px solid black;
+  height: 40px;
 }
 .tienda {
   width: 100%;
@@ -432,13 +447,16 @@ footer p {
   height: 370vh;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  border: 1px solid black;
+  justify-content: space-around;
+  border: 3px solid black;
+  -webkit-box-shadow: -1px 2px 24px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 2px 24px -1px rgba(0,0,0,0.75);
+  box-shadow: -1px 2px 24px -1px rgba(0,0,0,0.75);  
 }
 
 .productoTienda {
   height: 24rem;
-  width: calc(33.33% - 10px);
+  width: calc(33.33% - 15px);
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -464,6 +482,18 @@ footer p {
   cursor:pointer;
   position:relative;
   bottom:5px;
+  border-radius:10px;
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  -ms-border-radius:10px;
+  -o-border-radius:10px;
+  font-weight:bold;
+  font-size:1.1em;
+}
+.botonAgregarCarrito:hover{
+  -webkit-box-shadow: -1px 2px 24px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 2px 24px -1px rgba(0,0,0,0.75);
+  box-shadow: -1px 2px 24px -1px rgba(0,0,0,0.75);
 }
 
 #toggleCarrito {
@@ -471,12 +501,13 @@ footer p {
   height: 100%;
   position: fixed;
   top: 0;
-  right: -300px; 
+  right: -20%; 
   background-color: #f0f0f0;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   transition: right 0.3s ease-in-out;
   z-index: 2;
+  overflow: auto;
 }
 
 #cerrarCarrito {
@@ -485,6 +516,7 @@ footer p {
   color: #fff;
   padding: 8px 10px;
   position:absolute;
+  z-index: 10;
   top:0px;
   left:0;
 }
@@ -499,6 +531,41 @@ margin:5px;
 }
 .totalProductosTexto{
 margin:10px;
-font-size:1.6em;
+font-size:1.5em;
+text-align:center;
 }
-
+.contenedorCarrito{
+  border-top:2px solid black;
+  margin:10px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.contenedorCarrito h3{
+  text-align:center;
+  padding:5px;
+  font-size:1.3em;
+}
+.precioCantidad{
+  display:flex; 
+  justify-content:space-around;
+  margin:10px;
+}
+.eliminarDelCarrito{
+  margin:5px;
+  background-color:#98560a;
+  height: 2.5em;
+  border-radius:15px;
+  -webkit-border-radius:15px;
+  -moz-border-radius:15px;
+  -ms-border-radius:15px;
+  -o-border-radius:15px;
+  font-weight:bold;
+  font-size:1em;
+  cursor: pointer;
+}
+.eliminarDelCarrito:hover{
+  -webkit-box-shadow: -1px 2px 24px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 2px 24px -1px rgba(0,0,0,0.75);
+  box-shadow: -1px 2px 24px -1px rgba(0,0,0,0.75);
+}

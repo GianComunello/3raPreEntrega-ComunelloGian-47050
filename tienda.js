@@ -2,14 +2,21 @@
 const toggleCarrito = document.querySelector("#toggleCarrito");
 const abrirCarrito = document.querySelector(".imgCarrito");
 const cerrarCarrito = document.querySelector("#cerrarCarrito");
+// Elementos tienda
+const spanCantidadProductos = document.querySelector("#cantidadProductos");
+const spanTotalCarrito = document.querySelector("#totalCarrito");
+const tiendaContenedor = document.querySelector(".tiendaContenedor");
+const divCarrito = document.querySelector(".contenido-carrito");
+const inputBuscar = document.querySelector(".buscador")
 
 abrirCarrito.addEventListener("click", function () {
   toggleCarrito.style.right = "0";
 });
 
 cerrarCarrito.addEventListener("click", function () {
-  toggleCarrito.style.right = "-300px";
+  toggleCarrito.style.right = "-20%";
 });
+
 
 class Producto {
   constructor(id, nombre, precio, marca, categoria, imagen) {
@@ -187,7 +194,7 @@ class BaseDeDatos {
   }
   // Devuelve un array con las coincidencias de la palabra con el nombre del producto
   registrosPorNombre(palabra) {
-    return this.producto.filter((producto) =>
+    return this.productos.filter((producto) =>
       producto.nombre.toLowerCase().includes(palabra.toLowerCase())
     );
   }
@@ -195,9 +202,11 @@ class BaseDeDatos {
 
 class Carrito {
   constructor() {
-    this.carrito = [];
+    const carritoStorage = JSON.parse(localStorage.getItem("carrito"));
+    this.carrito = carritoStorage || [];
     this.total = 0;
     this.cantidadProductos = 0;
+  this.listar();
   }
   //Recorre el array carrito y compara el id de los elementos
   estaEnCarrito({ id }) {
@@ -213,6 +222,8 @@ class Carrito {
     } else {
       this.carrito.push({ ...producto, cantidad: 1 });
     }
+    // Actualizo storage
+  localStorage.setItem("carrito", JSON.stringify(this.carrito));
     this.listar();
   }
   // Saca del carrito
@@ -224,23 +235,22 @@ class Carrito {
     } else {
       this.carrito.splice(indice, 1);
     }
+    //Actualizo storage
+    localStorage.setItem("carrito", JSON.stringify(this.carrito));
     this.listar();
   }
   //Agrega al HTML
   listar() {
     this.total = 0;
     this.cantidadProductos = 0;
-   divCarrito.innerHTML=` <h2 class="tituloCarrito">Carrito</h2>
-   <h3 class="cantidadProductosTexto">Cantidad de productos: <span id="cantidadProductos">0</span></h3>
-    <h3 class="totalProductosTexto">Total: $ <span id="totalCarrito">0</span></h3>
-   <button id="cerrarCarrito">Cerrar Carrito</button>`;
+   divCarrito.innerHTML= "";
 
     for (const producto of this.carrito){
 divCarrito.innerHTML += `
 <div class= "contenedorCarrito">
 <h3> ${producto.nombre} </h3>
-<h4> $${producto.precio} </h4>
-<h4> Cantidad: ${producto.cantidad} </h4>
+<div class="precioCantidad"> <h4>$${producto.precio} </h4>
+<h4> Cantidad: ${producto.cantidad} </h4> </div>
 <button class="eliminarDelCarrito" data-id="${producto.id}">Eliminar del carrito</button>
 </div>
 `;
@@ -256,7 +266,8 @@ boton.addEventListener("click", function (event){
     carrito.quitar(idProducto);
 })
 }
-
+spanCantidadProductos.innerText =  this.cantidadProductos;
+spanTotalCarrito.innerText = this.total;
 }
  }
 // Ejecuta la base de datos (crea array y agrega productos)
@@ -264,9 +275,7 @@ const bd = new BaseDeDatos();
 // Lo mismo con carrito
 const carrito = new Carrito();
 
-// Elementos tienda
-const tiendaContenedor = document.querySelector(".tiendaContenedor");
-const divCarrito = document.querySelector(".contenido-carrito");
+
 
 //
 cargarProductos(bd.traerRegistros());
@@ -296,3 +305,11 @@ function cargarProductos(productos) {
     });
   }
 }
+//Buscador
+
+inputBuscar.addEventListener("input", (event) => {
+   event.preventDefault();
+   const palabra = inputBuscar.value;
+   const producto = bd.registrosPorNombre(palabra);
+   cargarProductos(producto);
+} )
