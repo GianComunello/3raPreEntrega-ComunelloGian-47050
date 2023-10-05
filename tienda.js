@@ -294,6 +294,7 @@ function cargarProductos(productos) {
   }
 
   const botonesAgregar = document.querySelectorAll(".botonAgregarCarrito");
+
   for (const boton of botonesAgregar) {
     boton.addEventListener("click", (event) => {
       event.preventDefault();
@@ -302,6 +303,15 @@ function cargarProductos(productos) {
       // Se fija el objeto que tenga ese ID
       const producto = bd.registroPorId(idProducto);
       carrito.agregar(producto);
+      //Alerta 
+      Toastify({
+        text: `Se ha añadido ${producto.nombre}`,
+        gravity: "bottom",
+        position: "center",
+        style: {
+          background: "linear-gradient(to right, #00b09b, #96c93d)",
+        }
+      }).showToast();
     });
   }
 }
