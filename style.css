@@ -206,14 +206,16 @@ nav {
   height: 70%;
   width: 100%;
   margin: 10px auto;
+  justify-content:center;
+  align-items:center;
 }
 .fotoAutor {
   background-image: url("./imagenes_tenis/autor1messi.webp");
   background-size: cover;
   background-position: center;
   margin: 10px;
-  width: 550px;
-  height: 270px;
+  width: 20em;
+  height: 20em;
   border: 1px solid black;
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -223,7 +225,7 @@ nav {
 }
 
 #comentarios {
-  width: 100em;
+  width: 80%;
   height: auto;
   display: flex;
   align-items: center;
@@ -234,18 +236,17 @@ nav {
   font-family: Georgia, serif;
 }
 .autores {
-  position:relative;
-  bottom:-30px;
-  width: 12em;
+  margin:10px;
+  
+  width: 14em;
   height: 3em;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 .autoresLista {
   display: flex;
   justify-content: center;
-  
    }
 .autoresLista li {
   margin: 5px;
@@ -282,10 +283,8 @@ nav {
 }
 #autorNombre {
   position: absolute;
-  right: 10px;
-  width: 30%;
-  height: 40px;
-  
+  right:20px;
+
 }
 #autorNombre h4 {
   font-family: Georgia, serif;
@@ -384,7 +383,7 @@ font-size:1.5em;
     width: 70%;
   }
   #comentarios {
-    width: auto;
+    width: 90%;
   }
   .fotoAutor {
     width: 12em;
