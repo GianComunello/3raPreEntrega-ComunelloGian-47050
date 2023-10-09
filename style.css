@@ -163,7 +163,7 @@ nav {
 .publicidad {
   margin: auto;
   width: 70%;
-  height: 30vh;
+  height: 40vh;
   background: radial-gradient(circle, #faa72a, #d98c1f, #b97115);
   display: flex;
   flex-direction: column;
@@ -194,7 +194,7 @@ nav {
 }
 .section5 {
   background-color: #ffeda6;
-  height: 80vh;
+  height: 100vh;
   font-size: 20px;
 }
 .section5 h2 {
@@ -203,9 +203,9 @@ nav {
 }
 .contenedorComentarios {
   display: flex;
-  height: 50%;
+  height: 70%;
   width: 100%;
-  margin: 20px auto;
+  margin: 10px auto;
 }
 .fotoAutor {
   background-image: url("./imagenes_tenis/autor1messi.webp");
@@ -223,7 +223,8 @@ nav {
 }
 
 #comentarios {
-  width: 130em;
+  width: 100em;
+  height: auto;
   display: flex;
   align-items: center;
 }
@@ -233,8 +234,10 @@ nav {
   font-family: Georgia, serif;
 }
 .autores {
-  width: 22%;
-  height: 20%;
+  position:relative;
+  bottom:-30px;
+  width: 12em;
+  height: 3em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -242,9 +245,8 @@ nav {
 .autoresLista {
   display: flex;
   justify-content: center;
-  padding: 0;
-  margin: 0;
-}
+  
+   }
 .autoresLista li {
   margin: 5px;
   border: 1px solid black;
@@ -280,9 +282,10 @@ nav {
 }
 #autorNombre {
   position: absolute;
-  right: 30px;
+  right: 10px;
   width: 30%;
   height: 40px;
+  
 }
 #autorNombre h4 {
   font-family: Georgia, serif;
@@ -344,6 +347,14 @@ footer p {
   text-align: center;
 }
 @media (max-width: 830px) {
+  .inicio-texto h1{
+font-size:2em
+  }
+ .inicio-texto h2{
+  margin-left: 100px;
+font-size:1.5em;
+
+  } 
   .section2 {
     height: 120vh;
   }
@@ -367,14 +378,17 @@ footer p {
     align-items: center;
   }
   .section5 {
-    height: auto;
+    height: 130vh;
+  }
+  .publicidad button{
+    width: 70%;
   }
   #comentarios {
     width: auto;
   }
   .fotoAutor {
-    width: 20em;
-    height: 20em;
+    width: 12em;
+    height: 12em;
   }
   .autoresLista {
     margin: 10px;
@@ -393,9 +407,10 @@ footer p {
   .section6 {
     height: auto;
   }
-}
+  }
 #main {
-  background-color: #faa72a;
+  background: rgb(251,173,55);
+  background: linear-gradient(318deg, rgba(251,173,55,1) 7%, rgba(219,138,33,1) 46%, rgba(204,114,10,1) 82%);
 }
 .tituloTienda {
   text-align: center;
@@ -404,9 +419,9 @@ footer p {
 }
 .tiendaBuscador {
   display: flex;
- justify-content:flex-end;
+ justify-content:center;
  align-items:center;
-  width: 80%;
+  width: 90%;
   height: 5vh;
   margin: 40px;
 }
@@ -428,19 +443,29 @@ width: 40px;
   height: 400vh;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content:center;
 }
 .tiendaFiltros {
   width: 25%;
-  height: 100vh;
+  height: 90vh;
   display: flex;
 }
 
 .filtros {
   border: 1px solid black;
+  position:relative;
+bottom: -50px;
   height: 100%;
   width: 70%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 }
+.filtros h1{
+  font-size:1.5em;
+  margin:10px;
+}
+
 .tiendaContenedor {
   margin-top: 40px;
   width: 70%;
@@ -461,8 +486,7 @@ width: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 10px;
-  margin-bottom: 10px;
+  margin:5px;
   text-align: center;
 }
 .productoTienda h2 {
@@ -497,11 +521,11 @@ width: 40px;
 }
 
 #toggleCarrito {
-  width: 20%;
+  width: 300px;
   height: 100%;
   position: fixed;
   top: 0;
-  right: -20%; 
+  right: -300px; 
   background-color: #f0f0f0;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -566,6 +590,34 @@ text-align:center;
 }
 .eliminarDelCarrito:hover{
   -webkit-box-shadow: -1px 2px 24px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 2px 24px -1px rgba(0,0,0,0.75);
+  box-shadow: -1px 2px 24px -1px rgba(0,0,0,0.75);
+}
+
+.filtro{
+  width: 80%;
+  height: 3em;
+  background-color:white;
+  margin:30px;
+  text-align:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:30px;
+  font-weight:bold;   
+  cursor: pointer;
+   }
+   .filtro:hover{
+    webkit-box-shadow: -1px 2px 24px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 2px 24px -1px rgba(0,0,0,0.75);
+  box-shadow: -1px 2px 24px -1px rgba(0,0,0,0.75);
+   }
+  
+.filtrosActivo{
+background-color:#98560a;
+color:white;
+font-weight:bold;
+webkit-box-shadow: -1px 2px 24px -1px rgba(0,0,0,0.75);
   -moz-box-shadow: -1px 2px 24px -1px rgba(0,0,0,0.75);
   box-shadow: -1px 2px 24px -1px rgba(0,0,0,0.75);
 }

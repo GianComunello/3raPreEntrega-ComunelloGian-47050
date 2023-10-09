@@ -14,7 +14,7 @@ abrirCarrito.addEventListener("click", function () {
 });
 
 cerrarCarrito.addEventListener("click", function () {
-  toggleCarrito.style.right = "-20%";
+  toggleCarrito.style.right = "-300px";
 });
 
 
@@ -323,3 +323,51 @@ inputBuscar.addEventListener("input", (event) => {
    const producto = bd.registrosPorNombre(palabra);
    cargarProductos(producto);
 } )
+
+//Filtros
+const botonMostrasTodos = document.querySelector("#mostrarTodo");
+const botonAdidas = document.querySelector("#adidas");
+const botonNike=document.querySelector("#nike");
+const botonNewBalance=document.querySelector("#newBalance");
+const botonWilson =document.querySelector("#wilson");
+
+
+function quitarClaseActiva() {
+  const botonesFiltro = [botonMostrasTodos, botonAdidas, botonNike, botonNewBalance, botonWilson];
+  botonesFiltro.forEach((boton) => {
+    boton.classList.remove("filtrosActivo");
+  });
+}
+
+
+
+botonMostrasTodos.addEventListener("click", () =>{
+  cargarProductos(bd.traerRegistros());
+  quitarClaseActiva();
+  botonMostrasTodos.classList.add("filtrosActivo");
+})
+
+botonAdidas.addEventListener("click", () =>{
+  const adidasEcontrado = bd.productos.filter((producto)=> producto.marca === "Adidas");
+  cargarProductos(adidasEcontrado);
+  quitarClaseActiva();
+  botonAdidas.classList.add("filtrosActivo");
+});
+botonNike.addEventListener("click", () =>{
+  const nikeEcontrado = bd.productos.filter((producto)=> producto.marca === "Nike");
+  cargarProductos(nikeEcontrado);
+  quitarClaseActiva();
+  botonNike.classList.add("filtrosActivo");
+});
+botonNewBalance.addEventListener("click", () =>{
+  const newBalanceEcontrado = bd.productos.filter((producto)=> producto.marca === "New Balance");
+  cargarProductos(newBalanceEcontrado);
+  quitarClaseActiva();
+  botonNewBalance.classList.add("filtrosActivo");
+});
+botonWilson.addEventListener("click", () =>{
+  const wilsonEcontrado = bd.productos.filter((producto)=> producto.marca === "Wilson");
+  cargarProductos(wilsonEcontrado);
+  quitarClaseActiva();
+  botonWilson.classList.add("filtrosActivo");
+});
