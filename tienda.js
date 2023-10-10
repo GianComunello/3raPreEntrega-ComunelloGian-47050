@@ -8,6 +8,9 @@ const spanTotalCarrito = document.querySelector("#totalCarrito");
 const tiendaContenedor = document.querySelector(".tiendaContenedor");
 const divCarrito = document.querySelector(".contenido-carrito");
 const inputBuscar = document.querySelector(".buscador")
+//Elementos notificacion
+let notificacionContenedor = document.querySelector("#notificacion");
+let notificacionCantidad = document.querySelector("#notificacionSpan");
 
 abrirCarrito.addEventListener("click", function () {
   toggleCarrito.style.right = "0";
@@ -225,6 +228,7 @@ class Carrito {
     // Actualizo storage
   localStorage.setItem("carrito", JSON.stringify(this.carrito));
     this.listar();
+    notificacionCarrito();
   }
   // Saca del carrito
   quitar(id) {
@@ -238,6 +242,7 @@ class Carrito {
     //Actualizo storage
     localStorage.setItem("carrito", JSON.stringify(this.carrito));
     this.listar();
+    notificacionCarrito();
   }
   //Agrega al HTML
   listar() {
@@ -371,3 +376,15 @@ botonWilson.addEventListener("click", () =>{
   quitarClaseActiva();
   botonWilson.classList.add("filtrosActivo");
 });
+
+// Notificacion del carrito
+
+function notificacionCarrito(){
+  if(carrito.cantidadProductos >= 1){
+  notificacionContenedor.style.display = "flex";
+  notificacionCantidad.innerText = carrito.cantidadProductos;
+} else{
+  notificacionCantidad.innerText = "0";
+  notificacionContenedor.style.display ="none";
+}
+ }

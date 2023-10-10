@@ -28,3 +28,4 @@ function cambiarTercerLi() {
   fotoAutor.style.backgroundImage = 'url("./imagenes_tenis/autor3.jpg")';
   autorNombre.innerText = "Julieta Lopez";
 }
+
