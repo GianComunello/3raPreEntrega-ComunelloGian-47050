@@ -7,7 +7,9 @@ const spanCantidadProductos = document.querySelector("#cantidadProductos");
 const spanTotalCarrito = document.querySelector("#totalCarrito");
 const tiendaContenedor = document.querySelector(".tiendaContenedor");
 const divCarrito = document.querySelector(".contenido-carrito");
-const inputBuscar = document.querySelector(".buscador")
+const inputBuscar = document.querySelector(".buscador");
+const botonComprarCarrito = document.querySelector("#botonComprarCarritoContenedor");
+
 //Elementos notificacion
 let notificacionContenedor = document.querySelector("#notificacion");
 let notificacionCantidad = document.querySelector("#notificacionSpan");
@@ -36,156 +38,13 @@ class BaseDeDatos {
   constructor(id, nombre, precio, marca, categoria, imagen) {
     // Array para los producto q tengo
     this.productos = [];
-    // Productos//
-    this.agregarRegistro(
-      1,
-      "Nike Vapor Lite Clay",
-      99000,
-      "Nike",
-      "Zapatillas",
-      "nikecourtvapor.jpg"
-    );
-    this.agregarRegistro(
-      2,
-      "Asics Solution Speed",
-      119000,
-      "Asics",
-      "Zapatillas",
-      "AcicsSolutionSwift.jpg"
-    );
-    this.agregarRegistro(
-      3,
-      "Adidas Game Court 2",
-      60000,
-      "Adidas",
-      "Zapatillas",
-      "adidasgamecourt.jpg"
-    );
-    this.agregarRegistro(
-      4,
-      "Asics Gel Dedicate 8 Clay",
-      60000,
-      "Asics",
-      "Zapatillas",
-      "asicsgeldedicate.jpg"
-    );
-    this.agregarRegistro(
-      5,
-      "Adidas Adizero Ubersonic",
-      50000,
-      "Adidas",
-      "Zapatillas",
-      "AdidasAdizeroUbersonic4.jpg"
-    );
-    this.agregarRegistro(
-      6,
-      "Raqueta Wilson Blade",
-      150000,
-      "Wilson",
-      "Otro",
-      "raquetawilsonblade.jpeg"
-    );
-    this.agregarRegistro(
-      7,
-      "New Balance Fresh Foam M",
-      40000,
-      "New Balance",
-      "Zapatillas",
-      "NewBalanceFreshFoamMoreMujer.jpg"
-    );
-    this.agregarRegistro(
-      8,
-      "Vincha Nike",
-      7000,
-      "Nike",
-      "Otro",
-      "VinchaNike.jpg"
-    );
-    this.agregarRegistro(
-      9,
-      "Adidas Game Court Mujer",
-      60000,
-      "Adidas",
-      "Zapatillas",
-      "NikeCourtAirMaxMujer.jpg"
-    );
-    this.agregarRegistro(
-      10,
-      "Nike Court Zoom Vapor",
-      104000,
-      "Nike",
-      "Zapatillas",
-      "NikeCourtAirZoomVapor.jpg"
-    );
-    this.agregarRegistro(
-      11,
-      "Adidas Barricade",
-      80000,
-      "Adidas",
-      "Zapatillas",
-      "AdidasBarricade12.jpg"
-    );
-    this.agregarRegistro(
-      12,
-      "New Balance Fresh Foam",
-      95000,
-      "New Balance",
-      "Zapatillas",
-      "NewBalanceFrehFoam1080.jpg"
-    );
-    this.agregarRegistro(
-      13,
-      "Muñequera Nike",
-      6000,
-      "Nike",
-      "Otro",
-      "muñequeraNike.jpg"
-    );
-    this.agregarRegistro(
-      14,
-      "New Balance FuelCell Rebel",
-      90000,
-      "New Balance",
-      "Zapatillas",
-      "NewBalanceFuelCellRebelMujer.jpg"
-    );
-    this.agregarRegistro(
-      15,
-      "Nike Dunk Low",
-      130000,
-      "Nike",
-      "Zapatillas",
-      "nikesbdunk.png"
-    );
-    this.agregarRegistro(
-      16,
-      "New Balance 990 v4 Jupiter",
-      150000,
-      "New Balance",
-      "Zapatillas",
-      "NewBalance990v4Jupiter.jpg"
-    );
-    this.agregarRegistro(
-      17,
-      "Wilson Rush Pro",
-      40000,
-      "Nike",
-      "Zapatillas",
-      "WilsonRushPro.jpg"
-    );
-    this.agregarRegistro(
-      18,
-      "Pelota Wilson x3",
-      9000,
-      "Wilson",
-      "Otro",
-      "PelotaWilson.jpg"
-    );
+    this.cargarRegistros(); 
+    
   }
-  // Crea el objeto producto y lo agrega al catalogo (array)
-  agregarRegistro(id, nombre, precio, marca, categoria, imagen) {
-    const producto = new Producto(id, nombre, precio, marca, categoria, imagen);
-    this.productos.push(producto);
+  async cargarRegistros(){
+    const resultado = await fetch(`productos.json`);
+    this.productos = await resultado.json();
+    cargarProductos(this.productos);
   }
   //Devuelve el catalogo de productos
   traerRegistros() {
@@ -262,6 +121,11 @@ divCarrito.innerHTML += `
 this.total +=  producto.precio * producto.cantidad;
 this.cantidadProductos+= producto.cantidad;
     }
+    if(this.cantidadProductos > 0){
+      botonComprarCarrito.style.display="block";
+          }else{
+            botonComprarCarrito.style.display="none";
+          }
 const botonesQuitar = document.querySelectorAll(".eliminarDelCarrito");
 
 for(const boton of botonesQuitar){
@@ -336,6 +200,8 @@ const botonNike=document.querySelector("#nike");
 const botonNewBalance=document.querySelector("#newBalance");
 const botonWilson =document.querySelector("#wilson");
 
+const main = document.querySelector("#main");
+
 
 function quitarClaseActiva() {
   const botonesFiltro = [botonMostrasTodos, botonAdidas, botonNike, botonNewBalance, botonWilson];
@@ -350,6 +216,7 @@ botonMostrasTodos.addEventListener("click", () =>{
   cargarProductos(bd.traerRegistros());
   quitarClaseActiva();
   botonMostrasTodos.classList.add("filtrosActivo");
+ main.style.height = "420vh";
 })
 
 botonAdidas.addEventListener("click", () =>{
@@ -357,24 +224,28 @@ botonAdidas.addEventListener("click", () =>{
   cargarProductos(adidasEcontrado);
   quitarClaseActiva();
   botonAdidas.classList.add("filtrosActivo");
+  main.style.height = "auto";
 });
 botonNike.addEventListener("click", () =>{
   const nikeEcontrado = bd.productos.filter((producto)=> producto.marca === "Nike");
   cargarProductos(nikeEcontrado);
   quitarClaseActiva();
   botonNike.classList.add("filtrosActivo");
+  main.style.height = "auto";
 });
 botonNewBalance.addEventListener("click", () =>{
   const newBalanceEcontrado = bd.productos.filter((producto)=> producto.marca === "New Balance");
   cargarProductos(newBalanceEcontrado);
   quitarClaseActiva();
   botonNewBalance.classList.add("filtrosActivo");
+  main.style.height = "auto";
 });
 botonWilson.addEventListener("click", () =>{
   const wilsonEcontrado = bd.productos.filter((producto)=> producto.marca === "Wilson");
   cargarProductos(wilsonEcontrado);
   quitarClaseActiva();
   botonWilson.classList.add("filtrosActivo");
+  main.style.height = "auto";
 });
 
 // Notificacion del carrito
@@ -387,4 +258,4 @@ function notificacionCarrito(){
   notificacionCantidad.innerText = "0";
   notificacionContenedor.style.display ="none";
 }
- }
+}

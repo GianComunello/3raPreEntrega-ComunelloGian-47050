@@ -77,11 +77,11 @@ background: linear-gradient(318deg, rgba(186,174,156,1) 16%, rgba(166,157,144,1)
     -webkit-box-shadow: -1px 2px 24px -1px rgba(0,0,0,0.75);
     -moz-box-shadow: -1px 2px 24px -1px rgba(0,0,0,0.75);
     box-shadow: -1px 2px 24px -1px rgba(0,0,0,0.75);  
-    display:none;
     font-weight:bold;
+    display:none;
 }
 #notificaconSpan{
- z-index: 3;
+ z-index: 5;
 
 }
 #inicio {
@@ -437,6 +437,7 @@ font-size:1.5em;
 #main {
   background: rgb(251,173,55);
   background: linear-gradient(318deg, rgba(251,173,55,1) 7%, rgba(219,138,33,1) 46%, rgba(204,114,10,1) 82%);
+  height: 420vh;
 }
 .tituloTienda {
   text-align: center;
@@ -617,6 +618,33 @@ text-align:center;
 }
 .eliminarDelCarrito:hover{
   -webkit-box-shadow: -1px 2px 24px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 2px 24px -1px rgba(0,0,0,0.75);
+  box-shadow: -1px 2px 24px -1px rgba(0,0,0,0.75);
+}
+#botonComprarCarritoContenedor{
+  width: 100%;
+  border-top:2px solid black;
+  display:flex;
+  justify-content:center;
+}
+#botonComprarCarrito{
+ background-color: #dc3524; 
+  height: 2.5em;
+  width: 80%;
+  cursor: pointer;
+  margin:20px;
+  border-radius:30px;
+  -webkit-border-radius:30px;
+  -moz-border-radius:30px;
+  -ms-border-radius:30px;
+  -o-border-radius:30px;
+  font-weight:bold; 
+  font-size: 16px;
+  border:2px solid black;
+}
+#botonComprarCarrito:hover{
+  border:2px solid #98560a;
+  webkit-box-shadow: -1px 2px 24px -1px rgba(0,0,0,0.75);
   -moz-box-shadow: -1px 2px 24px -1px rgba(0,0,0,0.75);
   box-shadow: -1px 2px 24px -1px rgba(0,0,0,0.75);
 }
