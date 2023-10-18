@@ -152,7 +152,7 @@ function cargarProductos(productos) {
   // Recorro los elementos del array y los agrego al html
   for (const producto of productos) {
     tiendaContenedor.innerHTML += `
-<div class="productoTienda"> 
+<div class="productoTienda" data-aos="fade-down"> 
 <img class="img-productoTienda" src="./imagenes_tenis/${producto.imagen}" alt="producto">
 <h2>${producto.nombre}</h2>
 <h2>$${producto.precio}</h2>

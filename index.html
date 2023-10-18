@@ -7,6 +7,8 @@
   <title>TiendaTenis</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="shortcut icon" href="./imagenes_tenis/pelota_tenis.jpg">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -40,14 +42,14 @@
         <button id="botonComprarCarrito">Comprar</button>
       </div>
     </div>
-    <div class="inicio-texto">
+    <div class="inicio-texto" data-aos="fade-right">
       <h1>Tienda de zapatillas de tenis</h1>
       <h2>Raquetas y accesorios</h2>
     </div>
   </section>
   <section class="section2">
     <h2>Productos de alta calidad por las mejores marcas</h2>
-    <div class="marcas">
+    <div class="marcas" data-aos="flip-right">
       <div class="contenedormarca">
         <h3>Adidas</h3>
         <div class="marca"> <img src="./imagenes_tenis/logo_adidas.webp" alt="adidas"></div>
@@ -103,7 +105,7 @@
     </div>
   </section>
   <section class="section4">
-    <div class="publicidad">
+    <div class="publicidad" data-aos="zoom-in">
       <h2> Hace tu pedido online y te llega a la puerta de tu casa!</h2>
       <button> <a href="tienda.html">Entra a la tienda</a></button>
     </div>
@@ -132,8 +134,10 @@
   </section>
   <section class="section6">
     <h2> Lo mas vendido:</h2>
-    <div class="productos-populares">
-      <div class="producto"> <img class="img-producto" src="./imagenes_tenis/nikecourtvapor.jpg" alt="nike">
+    <div class="productos-populares" data-aos="fade-down"
+    data-aos-easing="linear"
+    data-aos-duration="1500">
+      <div class="producto" > <img class="img-producto" src="./imagenes_tenis/nikecourtvapor.jpg" alt="nike">
         <h2>Nike Vapor Lite Clay </h2>
         <button> <a href="tienda.html">Comprar aqui!</a></button>
       </div>
@@ -165,6 +169,10 @@
     <p>©Todos los derechos reservados.</p>
   </footer>
   </main>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="app.js"></script>
   <script src="tienda.js"></script>
 </body>

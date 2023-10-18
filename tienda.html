@@ -7,7 +7,9 @@
   <title>Tienda</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="shortcut icon" href="./imagenes_tenis/pelota_tenis.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -41,14 +43,14 @@
         <button id="botonComprarCarrito">Comprar</button>
       </div>
     </div>
-    <h1 class="tituloTienda">Tienda</h1>
+    <h1 class="tituloTienda" data-aos="fade-right">Tienda</h1>
     <section class="tiendaBuscador">
       <img src="imagenes_tenis/search.svg" alt="lupa"><input class="buscador" type="text"
         placeholder="Buscar un producto...">
     </section>
     <section class="tienda">
       <section class="tiendaFiltros">
-        <div class="filtros">
+        <div class="filtros" data-aos="fade-up-right">
           <h1> Filtrar por marca:</h1>
           <div class="filtro filtrosActivo" id="mostrarTodo">Todos los Productos</div>
           <div class="filtro" id="adidas">Adidas</div>
@@ -65,6 +67,10 @@
   <footer>
     <p> ©Todos los derechos reservados.</p>
   </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script src="tienda.js"></script>
 </body>
