@@ -1,146 +1,146 @@
 [
-    {
-    "id":1,
+  {
+    "id": 1,
     "nombre": "Nike Vapor Lite Clay",
     "precio": 99000,
-    "marca":"Nike",
+    "marca": "Nike",
     "categoria": "Zapatillas",
-    "imagen":"nikecourtvapor.jpg"
-    },
-    {
-        "id":2,
+    "imagen": "nikecourtvapor.jpg"
+  },
+  {
+    "id": 2,
     "nombre": "Asics Solution Speed",
     "precio": 119000,
-    "marca":"Asics",
+    "marca": "Asics",
     "categoria": "Zapatillas",
-    "imagen":"AcicsSolutionSwift.jpg"
-    },
-    {
-        "id":3,
-      "nombre": "Adidas Game Court 2",
-      "precio": 60000,
-      "marca": "Adidas",
-      "categoria":"Zapatillas",
-      "imagen": "adidasgamecourt.jpg"
-    },
-    {
-        "id":4,
-      "nombre": "Asics Gel Dedicate 8 Clay",
-      "precio": 60000,
-      "marca": "Asics",
-      "categoria":"Zapatillas",
-      "imagen": "asicsgeldedicate.jpg"
-    },
-    {
-    "id":5,
-      "nombre": "Adidas Adizero Ubersonic",
-      "precio": 50000,
-      "marca": "Adidas",
-      "categoria":"Zapatillas",
-      "imagen": "AdidasAdizeroUbersonic4.jpg"
-    },
-    {
-        "id":6,
-        "nombre": "Raqueta Wilson Blade",
-        "precio": 150000,
-        "marca": "Wilson",
-        "categoria":"Otro",
-        "imagen": "raquetawilsonblade.jpeg" 
-    },
-    {
-        "id":7,
-        "nombre": "New Balance Fresh Foam M",
-        "precio": 40000,
-        "marca": "New Balance",
-        "categoria":"Zapatillas",
-        "imagen": "NewBalanceFreshFoamMoreMujer.jpg"
-    },
-    {
-        "id":8,
-        "nombre": "Vincha Nike",
-        "precio": 7000,
-        "marca": "Nike",
-        "categoria":"Otro",
-        "imagen": "VinchaNike.jpg" 
-    },
-    {
-        "id":9,
-        "nombre": "Adidas Game Court Mujer",
-        "precio": 60000,
-        "marca": "Adidas",
-        "categoria":"Zapatillas",
-        "imagen": "NikeCourtAirMaxMujer.jpg" 
-    },
-    {
-        "id":10,
-        "nombre": "Nike Court Zoom Vapor",
-        "precio": 104000,
-        "marca": "Nike",
-        "categoria":"Zapatillas",
-        "imagen": "NikeCourtAirZoomVapor.jpg"
-    },
-    {
-        "id":11,
-        "nombre": "Adidas Barricade",
-        "precio": 80000,
-        "marca": "Adidas",
-        "categoria":"Zapatillas",
-        "imagen": "AdidasBarricade12.jpg" 
-    },
-    {
-        "id":12,
-        "nombre": "New Balance Fresh Foam",
-        "precio": 95000,
-        "marca": "New Balance",
-        "categoria":"Zapatillas",
-        "imagen": "NewBalanceFrehFoam1080.jpg" 
-    },
-    {
-        "id":13,
-        "nombre": "Muñequera Nike",
-        "precio":6000 ,
-        "marca": "Nike",
-        "categoria":"Otro",
-        "imagen": "muñequeraNike.jpg" 
-    },
-    {
-        "id":14,
-        "nombre": "New Balance FuelCell Rebel",
-        "precio":90000 ,
-        "marca": "New Balance",
-        "categoria":"Zapatillas",
-        "imagen": "NewBalanceFuelCellRebelMujer.jpg" 
-    },
-    {
-        "id":15,
-        "nombre": "Nike Dunk Low",
-        "precio":130000 ,
-        "marca": "Nike",
-        "categoria":"Zapatillas",
-        "imagen": "nikesbdunk.png"
-    },
-    {
-        "id":16,
-        "nombre": "New Balance 990 v4 Jupiter",
-        "precio":150000 ,
-        "marca": "New Balance",
-        "categoria":"Zapatillas",
-        "imagen": "NewBalance990v4Jupiter.jpg"
-    },
-    {
-        "id":17,
-        "nombre": "Wilson Rush Pro",
-        "precio":40000 ,
-        "marca": "Wilson",
-        "categoria":"Zapatillas",
-        "imagen": "WilsonRushPro.jpg"
-    },
-    {
-        "id":18,
-        "nombre": "Pelota Wilson x3",
-        "precio":9000 ,
-        "marca": "Wilson",
-        "categoria":"Otro",
-        "imagen": "PelotaWilson.jpg"
-    }
+    "imagen": "AcicsSolutionSwift.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Adidas Game Court 2",
+    "precio": 60000,
+    "marca": "Adidas",
+    "categoria": "Zapatillas",
+    "imagen": "adidasgamecourt.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "Asics Gel Dedicate 8 Clay",
+    "precio": 60000,
+    "marca": "Asics",
+    "categoria": "Zapatillas",
+    "imagen": "asicsgeldedicate.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Adidas Adizero Ubersonic",
+    "precio": 50000,
+    "marca": "Adidas",
+    "categoria": "Zapatillas",
+    "imagen": "AdidasAdizeroUbersonic4.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "Raqueta Wilson Blade",
+    "precio": 150000,
+    "marca": "Wilson",
+    "categoria": "Otro",
+    "imagen": "raquetawilsonblade.jpeg"
+  },
+  {
+    "id": 7,
+    "nombre": "New Balance Fresh Foam M",
+    "precio": 40000,
+    "marca": "New Balance",
+    "categoria": "Zapatillas",
+    "imagen": "NewBalanceFreshFoamMoreMujer.jpg"
+  },
+  {
+    "id": 8,
+    "nombre": "Vincha Nike",
+    "precio": 7000,
+    "marca": "Nike",
+    "categoria": "Otro",
+    "imagen": "VinchaNike.jpg"
+  },
+  {
+    "id": 9,
+    "nombre": "Adidas Game Court Mujer",
+    "precio": 60000,
+    "marca": "Adidas",
+    "categoria": "Zapatillas",
+    "imagen": "NikeCourtAirMaxMujer.jpg"
+  },
+  {
+    "id": 10,
+    "nombre": "Nike Court Zoom Vapor",
+    "precio": 104000,
+    "marca": "Nike",
+    "categoria": "Zapatillas",
+    "imagen": "NikeCourtAirZoomVapor.jpg"
+  },
+  {
+    "id": 11,
+    "nombre": "Adidas Barricade",
+    "precio": 80000,
+    "marca": "Adidas",
+    "categoria": "Zapatillas",
+    "imagen": "AdidasBarricade12.jpg"
+  },
+  {
+    "id": 12,
+    "nombre": "New Balance Fresh Foam",
+    "precio": 95000,
+    "marca": "New Balance",
+    "categoria": "Zapatillas",
+    "imagen": "NewBalanceFrehFoam1080.jpg"
+  },
+  {
+    "id": 13,
+    "nombre": "Muñequera Nike",
+    "precio": 6000,
+    "marca": "Nike",
+    "categoria": "Otro",
+    "imagen": "muñequeraNike.jpg"
+  },
+  {
+    "id": 14,
+    "nombre": "New Balance FuelCell Rebel",
+    "precio": 90000,
+    "marca": "New Balance",
+    "categoria": "Zapatillas",
+    "imagen": "NewBalanceFuelCellRebelMujer.jpg"
+  },
+  {
+    "id": 15,
+    "nombre": "Nike Dunk Low",
+    "precio": 130000,
+    "marca": "Nike",
+    "categoria": "Zapatillas",
+    "imagen": "nikesbdunk.png"
+  },
+  {
+    "id": 16,
+    "nombre": "New Balance 990 v4 Jupiter",
+    "precio": 150000,
+    "marca": "New Balance",
+    "categoria": "Zapatillas",
+    "imagen": "NewBalance990v4Jupiter.jpg"
+  },
+  {
+    "id": 17,
+    "nombre": "Wilson Rush Pro",
+    "precio": 40000,
+    "marca": "Wilson",
+    "categoria": "Zapatillas",
+    "imagen": "WilsonRushPro.jpg"
+  },
+  {
+    "id": 18,
+    "nombre": "Pelota Wilson x3",
+    "precio": 9000,
+    "marca": "Wilson",
+    "categoria": "Otro",
+    "imagen": "PelotaWilson.jpg"
+  }
 ]

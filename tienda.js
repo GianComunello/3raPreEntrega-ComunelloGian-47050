@@ -8,7 +8,9 @@ const spanTotalCarrito = document.querySelector("#totalCarrito");
 const tiendaContenedor = document.querySelector(".tiendaContenedor");
 const divCarrito = document.querySelector(".contenido-carrito");
 const inputBuscar = document.querySelector(".buscador");
-const botonComprarCarrito = document.querySelector("#botonComprarCarritoContenedor");
+const botonComprarCarrito = document.querySelector(
+  "#botonComprarCarritoContenedor"
+);
 
 //Elementos notificacion
 let notificacionContenedor = document.querySelector("#notificacion");
@@ -21,7 +23,6 @@ abrirCarrito.addEventListener("click", function () {
 cerrarCarrito.addEventListener("click", function () {
   toggleCarrito.style.right = "-300px";
 });
-
 
 class Producto {
   constructor(id, nombre, precio, marca, categoria, imagen) {
@@ -38,10 +39,9 @@ class BaseDeDatos {
   constructor(id, nombre, precio, marca, categoria, imagen) {
     // Array para los producto q tengo
     this.productos = [];
-    this.cargarRegistros(); 
-    
+    this.cargarRegistros();
   }
-  async cargarRegistros(){
+  async cargarRegistros() {
     const resultado = await fetch(`productos.json`);
     this.productos = await resultado.json();
     cargarProductos(this.productos);
@@ -68,7 +68,7 @@ class Carrito {
     this.carrito = carritoStorage || [];
     this.total = 0;
     this.cantidadProductos = 0;
-  this.listar();
+    this.listar();
   }
   //Recorre el array carrito y compara el id de los elementos
   estaEnCarrito({ id }) {
@@ -85,7 +85,7 @@ class Carrito {
       this.carrito.push({ ...producto, cantidad: 1 });
     }
     // Actualizo storage
-  localStorage.setItem("carrito", JSON.stringify(this.carrito));
+    localStorage.setItem("carrito", JSON.stringify(this.carrito));
     this.listar();
     notificacionCarrito();
   }
@@ -107,10 +107,10 @@ class Carrito {
   listar() {
     this.total = 0;
     this.cantidadProductos = 0;
-   divCarrito.innerHTML= "";
+    divCarrito.innerHTML = "";
 
-    for (const producto of this.carrito){
-divCarrito.innerHTML += `
+    for (const producto of this.carrito) {
+      divCarrito.innerHTML += `
 <div class= "contenedorCarrito">
 <h3> ${producto.nombre} </h3>
 <div class="precioCantidad"> <h4>$${producto.precio} </h4>
@@ -118,33 +118,31 @@ divCarrito.innerHTML += `
 <button class="eliminarDelCarrito" data-id="${producto.id}">Eliminar del carrito</button>
 </div>
 `;
-this.total +=  producto.precio * producto.cantidad;
-this.cantidadProductos+= producto.cantidad;
+      this.total += producto.precio * producto.cantidad;
+      this.cantidadProductos += producto.cantidad;
     }
-    if(this.cantidadProductos > 0){
-      botonComprarCarrito.style.display="block";
-          }else{
-            botonComprarCarrito.style.display="none";
-          }
-const botonesQuitar = document.querySelectorAll(".eliminarDelCarrito");
+    if (this.cantidadProductos > 0) {
+      botonComprarCarrito.style.display = "block";
+    } else {
+      botonComprarCarrito.style.display = "none";
+    }
+    const botonesQuitar = document.querySelectorAll(".eliminarDelCarrito");
 
-for(const boton of botonesQuitar){
-boton.addEventListener("click", function (event){
-    event.preventDefault();
-    const idProducto = Number(boton.dataset.id);
-    carrito.quitar(idProducto);
-})
+    for (const boton of botonesQuitar) {
+      boton.addEventListener("click", function (event) {
+        event.preventDefault();
+        const idProducto = Number(boton.dataset.id);
+        carrito.quitar(idProducto);
+      });
+    }
+    spanCantidadProductos.innerText = this.cantidadProductos;
+    spanTotalCarrito.innerText = this.total;
+  }
 }
-spanCantidadProductos.innerText =  this.cantidadProductos;
-spanTotalCarrito.innerText = this.total;
-}
- }
 // Ejecuta la base de datos (crea array y agrega productos)
 const bd = new BaseDeDatos();
 // Lo mismo con carrito
 const carrito = new Carrito();
-
-
 
 //
 cargarProductos(bd.traerRegistros());
@@ -172,14 +170,14 @@ function cargarProductos(productos) {
       // Se fija el objeto que tenga ese ID
       const producto = bd.registroPorId(idProducto);
       carrito.agregar(producto);
-      //Alerta 
+      //Alerta
       Toastify({
         text: `Se ha añadido ${producto.nombre}`,
         gravity: "bottom",
         position: "center",
         style: {
           background: "linear-gradient(to right, #00b09b, #96c93d)",
-        }
+        },
       }).showToast();
     });
   }
@@ -187,61 +185,72 @@ function cargarProductos(productos) {
 //Buscador
 
 inputBuscar.addEventListener("input", (event) => {
-   event.preventDefault();
-   const palabra = inputBuscar.value;
-   const producto = bd.registrosPorNombre(palabra);
-   cargarProductos(producto);
-} )
+  event.preventDefault();
+  const palabra = inputBuscar.value;
+  const producto = bd.registrosPorNombre(palabra);
+  cargarProductos(producto);
+});
 
 //Filtros
 const botonMostrasTodos = document.querySelector("#mostrarTodo");
 const botonAdidas = document.querySelector("#adidas");
-const botonNike=document.querySelector("#nike");
-const botonNewBalance=document.querySelector("#newBalance");
-const botonWilson =document.querySelector("#wilson");
+const botonNike = document.querySelector("#nike");
+const botonNewBalance = document.querySelector("#newBalance");
+const botonWilson = document.querySelector("#wilson");
 
 const main = document.querySelector("#main");
 
-
 function quitarClaseActiva() {
-  const botonesFiltro = [botonMostrasTodos, botonAdidas, botonNike, botonNewBalance, botonWilson];
+  const botonesFiltro = [
+    botonMostrasTodos,
+    botonAdidas,
+    botonNike,
+    botonNewBalance,
+    botonWilson,
+  ];
   botonesFiltro.forEach((boton) => {
     boton.classList.remove("filtrosActivo");
   });
 }
 
-
-
-botonMostrasTodos.addEventListener("click", () =>{
+botonMostrasTodos.addEventListener("click", () => {
   cargarProductos(bd.traerRegistros());
   quitarClaseActiva();
   botonMostrasTodos.classList.add("filtrosActivo");
- main.style.height = "420vh";
-})
+  main.style.height = "auto";
+});
 
-botonAdidas.addEventListener("click", () =>{
-  const adidasEcontrado = bd.productos.filter((producto)=> producto.marca === "Adidas");
+botonAdidas.addEventListener("click", () => {
+  const adidasEcontrado = bd.productos.filter(
+    (producto) => producto.marca === "Adidas"
+  );
   cargarProductos(adidasEcontrado);
   quitarClaseActiva();
   botonAdidas.classList.add("filtrosActivo");
   main.style.height = "auto";
 });
-botonNike.addEventListener("click", () =>{
-  const nikeEcontrado = bd.productos.filter((producto)=> producto.marca === "Nike");
+botonNike.addEventListener("click", () => {
+  const nikeEcontrado = bd.productos.filter(
+    (producto) => producto.marca === "Nike"
+  );
   cargarProductos(nikeEcontrado);
   quitarClaseActiva();
   botonNike.classList.add("filtrosActivo");
   main.style.height = "auto";
 });
-botonNewBalance.addEventListener("click", () =>{
-  const newBalanceEcontrado = bd.productos.filter((producto)=> producto.marca === "New Balance");
+botonNewBalance.addEventListener("click", () => {
+  const newBalanceEcontrado = bd.productos.filter(
+    (producto) => producto.marca === "New Balance"
+  );
   cargarProductos(newBalanceEcontrado);
   quitarClaseActiva();
   botonNewBalance.classList.add("filtrosActivo");
   main.style.height = "auto";
 });
-botonWilson.addEventListener("click", () =>{
-  const wilsonEcontrado = bd.productos.filter((producto)=> producto.marca === "Wilson");
+botonWilson.addEventListener("click", () => {
+  const wilsonEcontrado = bd.productos.filter(
+    (producto) => producto.marca === "Wilson"
+  );
   cargarProductos(wilsonEcontrado);
   quitarClaseActiva();
   botonWilson.classList.add("filtrosActivo");
@@ -250,12 +259,12 @@ botonWilson.addEventListener("click", () =>{
 
 // Notificacion del carrito
 
-function notificacionCarrito(){
-  if(carrito.cantidadProductos >= 1){
-  notificacionContenedor.style.display = "flex";
-  notificacionCantidad.innerText = carrito.cantidadProductos;
-} else{
-  notificacionCantidad.innerText = "0";
-  notificacionContenedor.style.display ="none";
-}
+function notificacionCarrito() {
+  if (carrito.cantidadProductos >= 1) {
+    notificacionContenedor.style.display = "flex";
+    notificacionCantidad.innerText = carrito.cantidadProductos;
+  } else {
+    notificacionCantidad.innerText = "0";
+    notificacionContenedor.style.display = "none";
+  }
 }
